@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+	{{ super() }} <!-- will retain contents of it's parent 'base.html' -->
+{% endblock %}
+
+{% block page_content %}
+
+<header>
+	<h1>Record</h1>
+	<div class="menu-button" id="menu-button"></div>
+</header>
+
+<div class="mobile-menu">
+	<ul>
+		<a href="{{  url_for('home') }}"><li>HOME</li></a>
+		<a href="{{  url_for('login') }}"><li>LOGIN</li></a>
+		<a href="{{ url_for('logout') }}"><li>LOGOUT</li></a>
+		<a href="{{  url_for('record') }}"><li>RECORD</li></a>
+	</ul>
+</div>
+
+
+
+{% endblock %}

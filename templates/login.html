@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock%}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block page_content %}
+
+<header>
+	<h1>Login</h1>
+	<div class="menu-button" id="menu-button"></div>
+</header>
+
+{% include "partials/side-nav.html" %}
+
+<div class="error-wrapper">
+	<h3 class="error-message">{{ error }}</h3>
+</div>
+
+<form method="post" class="login">
+	<input type="text" name="user" placeholder="user">
+	<input type="password" name="password" placeholder="password">
+	<button class="btn-green btn-md">Submit</button>
+	<!-- <input type="submit"> -->
+</form>
+
+{% endblock %}

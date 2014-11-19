@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+	{{ super() }} <!-- will retain contents of it's parent 'base.html' -->
+{% endblock %}
+
+{% block page_content %}
+
+<header>
+	<h1>Sub Data</h1>
+	<div class="menu-button" id="menu-button"></div>
+</header>
+
+{% include "partials/side-nav.html" %}
+
+{% for message in get_flashed_messages() %}
+	<p style="color: #2ecc71; text-align: center; margin-top: 10px">{{ message }}</p>
+{% endfor  %}
+
+
+{% endblock %}

@@ -1,0 +1,253 @@
+/****************************************
+SETUP
+****************************************/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+body {
+	background: @clouds;
+}
+
+
+
+
+
+/****************************************
+OFF VIEWPORT NAV STRUCTURE
+****************************************/
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	height: 100%;
+	padding: 0;
+	position: relative;
+	width: 100%;
+
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+	-webkit-transition: .5s ease all;
+			transition: .5s ease all;
+}
+
+.content.show-nav {
+	-webkit-transform: translateX(-200px);
+	transform: translateX(-200px);	
+}
+
+.close {
+	cursor: pointer;
+	float: right;
+}
+
+
+
+
+
+/****************************************
+HEADER 
+****************************************/
+@header-height: 60px;
+@header-color: #000;
+header {
+	background: darken(@wet-asphalt, 10%);
+	padding: 10px 5px;
+	height: @header-height;
+	h1 {
+		text-align: left;
+	}
+}
+
+
+
+
+
+/****************************************
+MENU
+****************************************/
+.menu-button {
+	color: white;
+	cursor: pointer;
+	float: right;
+	position: relative;
+	padding-left: 45px;
+}
+.menu-button:after {
+	border-top: 10px double #fff;
+	border-bottom: 3px solid #fff;
+	content: "";
+	height: 4px;
+	position: absolute;
+	right: 10px;
+	top: -26px;
+	width: 25px;
+}
+
+.mobile-menu {
+	background: @wet-asphalt;
+	height: 100%;
+	right: -300px;
+	overflow-y: scroll;
+	position: absolute;
+	top: 0;
+	width: 300px;
+	ul {
+		list-style: none;
+		li {
+			border-bottom: 1px solid darken(@wet-asphalt, 5%);
+			height: 50px;
+			line-height: 50px;
+			padding-left: 25px;
+			text-align: left;
+		}
+		li:hover,
+		li:active {
+			background: lighten(@wet-asphalt, 10%)
+		}
+		a {
+			color: @emerald-green;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+
+/****************************************
+MAIN
+****************************************/
+
+
+
+
+
+/****************************************
+FOOTER
+****************************************/
+
+
+
+
+
+/****************************************
+BUTTONS
+****************************************/
+.btn-mixin() {
+	padding: 10px 20px;
+	width: 100%;
+}
+
+.btn-md {
+	font-size: 18px;
+}
+
+.btn-green {
+	border: 2px solid @emerald-green;
+	color: white;
+	background: @emerald-green;
+	.btn-mixin();
+}
+.btn-green:hover,
+.btn-green:active {
+	background: white;
+	color: @emerald-green;
+}
+.btn-green:focus {
+	outline: 0 !important;
+}
+
+.btn-black {
+	.btn-mixin();
+}
+
+
+
+
+
+/****************************************
+TYPOGRAPHY AND COLORS
+****************************************/
+@slate-gray: #778899;
+@forest-green: #228B22;
+@slick-green: #4CBF8D;
+@emerald-green: #2ecc71;
+@clouds: #ecf0f1;
+@concrete: #95a5a6;
+@wet-asphalt: #34495e;
+
+//combine these two greens with 
+// the two charcoal colors
+@aww-green-400: #1AA997;
+@aww-green-200: #5DC6B8;
+@aww-charcoal-200: #2A2A2A;
+@aww-charcoal-400: #202020;
+h1 {
+	color: @emerald-green;
+}
+
+
+
+
+
+/****************************************
+ERRORS
+****************************************/
+.error-wrapper {
+	margin-top: 10px;
+	.error-message {
+		color: #FF8C00;
+		text-align: center;
+	}
+}
+
+
+
+
+
+/****************************************
+FORMS
+****************************************/
+.login {
+	padding: 10px 5px 5px;
+	width: 100%;
+	input[type=text] {
+		color: @concrete;
+		padding: 10px;
+		margin: 5px 0;
+		width: 100%;
+		text-transform: uppercase;
+	}
+	input[type=submit] {
+		font-size: 100%;
+		border: none;
+		cursor: pointer;
+		display: block;
+		padding: 10px;
+		width: 100%;
+	}
+	input[type=password] {
+		color: @concrete;
+		padding: 10px;
+		margin: 5px 0;
+		width: 100%;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,181 @@
+/****************************************
+SETUP
+****************************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-family: 'Droid Sans', sans-serif;
+}
+body {
+  background: #ecf0f1;
+}
+/****************************************
+OFF VIEWPORT NAV STRUCTURE
+****************************************/
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+.content.show-nav {
+  -webkit-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+.close {
+  cursor: pointer;
+  float: right;
+}
+/****************************************
+HEADER 
+****************************************/
+header {
+  background: #222f3d;
+  padding: 10px 5px;
+  height: 60px;
+}
+header h1 {
+  text-align: left;
+}
+/****************************************
+MENU
+****************************************/
+.menu-button {
+  color: white;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  padding-left: 45px;
+}
+.menu-button:after {
+  border-top: 10px double #fff;
+  border-bottom: 3px solid #fff;
+  content: "";
+  height: 4px;
+  position: absolute;
+  right: 10px;
+  top: -26px;
+  width: 25px;
+}
+.mobile-menu {
+  background: #34495e;
+  height: 100%;
+  right: -300px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+.mobile-menu ul {
+  list-style: none;
+}
+.mobile-menu ul li {
+  border-bottom: 1px solid #2b3c4e;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 25px;
+  text-align: left;
+}
+.mobile-menu ul li:hover,
+.mobile-menu ul li:active {
+  background: #46627f;
+}
+.mobile-menu ul a {
+  color: #2ecc71;
+  text-decoration: none;
+}
+/****************************************
+MAIN
+****************************************/
+/****************************************
+FOOTER
+****************************************/
+/****************************************
+BUTTONS
+****************************************/
+.btn-md {
+  font-size: 18px;
+}
+.btn-green {
+  border: 2px solid #2ecc71;
+  color: white;
+  background: #2ecc71;
+  padding: 10px 20px;
+  width: 100%;
+}
+.btn-green:hover,
+.btn-green:active {
+  background: white;
+  color: #2ecc71;
+}
+.btn-green:focus {
+  outline: 0 !important;
+}
+.btn-black {
+  padding: 10px 20px;
+  width: 100%;
+}
+/****************************************
+TYPOGRAPHY AND COLORS
+****************************************/
+h1 {
+  color: #2ecc71;
+}
+/****************************************
+ERRORS
+****************************************/
+.error-wrapper {
+  margin-top: 10px;
+}
+.error-wrapper .error-message {
+  color: #FF8C00;
+  text-align: center;
+}
+/****************************************
+FORMS
+****************************************/
+.login {
+  padding: 10px 5px 5px;
+  width: 100%;
+}
+.login input[type=text] {
+  color: #95a5a6;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+.login input[type=submit] {
+  font-size: 100%;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+.login input[type=password] {
+  color: #95a5a6;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  text-transform: uppercase;
+}
