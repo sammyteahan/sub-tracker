@@ -13,7 +13,8 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
 }
 
 body {
@@ -169,12 +170,17 @@ MAIN
 
 .sub-mast {
 	position: relative;
-	background: @wet-asphalt;
+	background: @clouds;
 	height: 100%;
 	width: 100%;
 	.row {
 		background: @clouds;
 		border-bottom: 1px solid @wet-asphalt;
+		&-title {
+			color: @wet-asphalt;
+			line-height: 75px;
+			padding-left: 85px;
+		}
 		&-icon {
 			float: left;
 			position: relative;
@@ -214,6 +220,12 @@ MAIN
 			display: block;
 			height: 75px;	
 		}
+		a {
+			text-decoration: none;
+		}
+	}
+	.row:hover {
+		background: darken(@clouds, 5%);
 	}
 }
 

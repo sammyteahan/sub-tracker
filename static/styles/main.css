@@ -13,7 +13,8 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
 body {
   background: #ecf0f1;
@@ -140,13 +141,18 @@ MAIN
 }
 .sub-mast {
   position: relative;
-  background: #34495e;
+  background: #ecf0f1;
   height: 100%;
   width: 100%;
 }
 .sub-mast .row {
   background: #ecf0f1;
   border-bottom: 1px solid #34495e;
+}
+.sub-mast .row-title {
+  color: #34495e;
+  line-height: 75px;
+  padding-left: 85px;
 }
 .sub-mast .row-icon {
   float: left;
@@ -186,6 +192,12 @@ MAIN
   background-size: 45px 45px;
   display: block;
   height: 75px;
+}
+.sub-mast .row a {
+  text-decoration: none;
+}
+.sub-mast .row:hover {
+  background: #dde4e6;
 }
 /****************************************
 FOOTER

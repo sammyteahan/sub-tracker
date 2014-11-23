@@ -8,17 +8,6 @@
 
 {% block page_content %}
 
-<!-- <header>
-	<h1>Sub Data</h1>
-	<div class="menu-button" id="menu-button"></div>
-</header>
- -->
-<!-- {% include "partials/side-nav.html" %} -->
-
-<!-- {% for message in get_flashed_messages() %}
-	<p style="color: #2ecc71; text-align: center; margin-top: 10px">{{ message }}</p>
-{% endfor  %} -->
-
 <div class="mast">
 	<div class="mast-image-container">
 		<i class="icon-home"></i>
@@ -28,21 +17,30 @@
 
 <div class="sub-mast">
 	<div class="row">
+		<a href="{{  url_for('home') }}">
 		<div class="row-icon carrot">
 			<i class="throw"></i>
 		</div>
+		<p class="row-title">SWEEP || SUBMIT</p>
+		</a>
 		<div class="clear"></div>
 	</div>
 	<div class="row">
+		<a href="{{  url_for('home') }}">
 		<div class="row-icon blue">
 			<i class="stats"></i>
 		</div>
+		<p class="row-title">STATS</p>
+		</a>
 		<div class="clear"></div>
 	</div>
 	<div class="row">
+		<a href="{{  url_for('home') }}">
 		<div class="row-icon alizarin">
 			<i class="throw"></i>
 		</div>
+		<p class="row-title">ROLL</p>
+		</a>
 		<div class="clear"></div>
 	</div>
 </div>

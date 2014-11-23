@@ -19,11 +19,36 @@
 	<h3 class="error-message">{{ error }}</h3>
 </div>
 
-<form method="post" class="login">
+<!-- <form method="post" class="login">
 	<input type="text" name="user" placeholder="user">
 	<input type="password" name="password" placeholder="password">
 	<button class="btn-green btn-md">Submit</button>
-	<!-- <input type="submit"> -->
+</form> -->
+
+<form method="post" role="form" class="login">
+	{{ form.csrf_token }}
+	<p>
+		{{ form.username(placeholder="User") }}
+		<span>
+			{% if form.username.errors %}
+				{% for error in form.username.errors %}
+					{{ error }}
+				{% endfor %}
+			{% endif %}
+		</span>
+	</p>
+	<p>
+		{{ form.password(placeholder="Password") }}
+		<span>
+			{% if form.password.errors %}
+				{% for error in form.password.errors %}
+					{{ error }}
+				{% endfor %}
+			{% endif %}
+		</span>
+	</p>
+	<button type="submit" class="btn-green btn-md">Submit</button>
 </form>
+
 
 {% endblock %}
