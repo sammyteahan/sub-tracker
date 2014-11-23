@@ -8,16 +8,45 @@
 
 {% block page_content %}
 
-<header>
+<!-- <header>
 	<h1>Sub Data</h1>
 	<div class="menu-button" id="menu-button"></div>
 </header>
+ -->
+<!-- {% include "partials/side-nav.html" %} -->
 
-{% include "partials/side-nav.html" %}
-
-{% for message in get_flashed_messages() %}
+<!-- {% for message in get_flashed_messages() %}
 	<p style="color: #2ecc71; text-align: center; margin-top: 10px">{{ message }}</p>
-{% endfor  %}
+{% endfor  %} -->
+
+<div class="mast">
+	<div class="mast-image-container">
+		<i class="icon-home"></i>
+	</div>
+	<h4 class="greeting">{{ name }}</h4>
+</div>
+
+<div class="sub-mast">
+	<div class="row">
+		<div class="row-icon carrot">
+			<i class="throw"></i>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="row">
+		<div class="row-icon blue">
+			<i class="stats"></i>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="row">
+		<div class="row-icon alizarin">
+			<i class="throw"></i>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
 
 
 {% endblock %}

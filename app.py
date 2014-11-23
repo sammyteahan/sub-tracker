@@ -5,21 +5,22 @@ from flask import request, url_for, redirect, session, g, flash
 from flask_wtf import Form
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Required
-# from mongokit import Connection, Document
+from mongokit import Connection, Document
 import os
 
 ### DB configuration
-# MONGODB_HOST = 'localhost'
-# MONGODB_PORT = 27017
+MONGODB_HOST = 'localhost'
+MONGODB_PORT = 27017
 
 ### Our applications name:
 app = Flask(__name__)
 
-### Connect to a local DB called `test`
-# connection = Connection()
-# testCollection = connection['test'].users
-# user = {'name': u'admin', 'email': u'admin@localhost'}
+### Connect to a local DB called `fighters`
+connection = Connection()
+testCollection = connection['fighters'].fighters
+user = {'name': u'admin', 'email': u'admin@localhost'}
 # testCollection.insert(user)
+
 
 # for development
 user = 'sammy'
