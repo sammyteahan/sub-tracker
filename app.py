@@ -19,13 +19,10 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 db = MongoKit(app)
 
-### Connect to a local DB called `fighters`
+### Connect to a local DB called `fighters`,
 ### and insert an admin user
 connection = Connection()
 fighterCollection = connection['fighters'].fighters
-password = bcrypt.generate_password_hash('meo123')
-admin = {'name': u'admin', 'password': password}
-fighterCollection.insert(admin)
 
 @db.register
 class Fighter(Document):
@@ -33,9 +30,20 @@ class Fighter(Document):
 	structure = {
 		'name': unicode,
 		'password': unicode,
+		'win': int,
+		'loss': int,
 	}
 	required_fields = ['name', 'password']
 	use_dot_notation = True
+
+### This inserts a fighter into the db
+# only run once though to avoid duplicates
+# sam = Fighter()
+# sam.name = 'sammy'
+# sam.password = bcrypt.generate_password_hash('meo123')
+# sam.win = 0
+# sam.loss = 0
+# fighterCollection.insert(sam)
 
 # config is a dictionary used by flask-wtf 
 app.config['SECRET_KEY'] = '{E]\x1eo\xa3\x04w\xe2\x1b\xf7|\x97\x93N8\x7f\xa4\xf0\xe5\n\xa7\xfc\x02' 
@@ -64,27 +72,25 @@ def login():
 	name = None
 	error = ''
 	form = LoginForm(request.form)
-
 	if request.method == 'POST':
 		if form.validate_on_submit():
-			print 'in here yo'
-			fighter = db.Fighter()
-			fighter.name = request.form['username']
-			password = request.form['password']
-			fighter.password = bcrypt.generate_password_hash(password)
-			# fighterCollection.insert(fighter)
-			session['username'] = fighter.name
-			session['logged_in'] = True
-			print "LOGGED IN AS ", session['username']
-			return redirect(url_for('home'))
+			user = fighterCollection.find_one({'name': request.form['username']}) #works: finds user
+			print user['name']
+			print user['password']
+			if user is not None and bcrypt.check_password_hash(user['password'], request.form['password']):
+				print 'user authenticated'
+				session['username'] = user['name']
+				session['logged_in'] = True
+				return redirect(url_for('home'))
+			else:
+				print 'User not in DB'
 		else:
-			error = 'What'
-
+			error = 'Invalid Form'
 	return render_template('login.html', error=error, form=form)
 
-
+#decorator used to require a login for this view function
 @app.route('/home')
-@login_required #decorator used to require a login for this view function
+@login_required 
 def home():
 	return render_template('index.html', name=session.get('username'))
 
