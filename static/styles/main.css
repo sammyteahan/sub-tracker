@@ -50,7 +50,7 @@ OFF VIEWPORT NAV STRUCTURE
 HEADER 
 ****************************************/
 header {
-  background: #222f3d;
+  background: #202020;
   padding: 10px 5px;
   height: 60px;
 }
@@ -78,7 +78,7 @@ MENU
   width: 25px;
 }
 .mobile-menu {
-  background: #34495e;
+  background: #2a2a2a;
   height: 100%;
   right: -300px;
   overflow-y: scroll;
@@ -90,7 +90,7 @@ MENU
   list-style: none;
 }
 .mobile-menu ul li {
-  border-bottom: 1px solid #2b3c4e;
+  border-bottom: 1px solid #060606;
   height: 50px;
   line-height: 50px;
   padding-left: 25px;
@@ -98,10 +98,10 @@ MENU
 }
 .mobile-menu ul li:hover,
 .mobile-menu ul li:active {
-  background: #46627f;
+  background: #444444;
 }
 .mobile-menu ul a {
-  color: #2ecc71;
+  color: #1aa997;
   text-decoration: none;
 }
 /****************************************
@@ -209,16 +209,16 @@ BUTTONS
   font-size: 18px;
 }
 .btn-green {
-  border: 2px solid #2ecc71;
+  border: 2px solid #1aa997;
   color: white;
-  background: #2ecc71;
+  background: #1aa997;
   padding: 10px 20px;
   width: 100%;
 }
 .btn-green:hover,
 .btn-green:active {
   background: white;
-  color: #2ecc71;
+  color: #1aa997;
 }
 .btn-green:focus {
   outline: 0 !important;
@@ -231,7 +231,7 @@ BUTTONS
 TYPOGRAPHY AND COLORS
 ****************************************/
 h1 {
-  color: #2ecc71;
+  color: #1aa997;
 }
 /****************************************
 ERRORS

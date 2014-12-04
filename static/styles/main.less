@@ -67,7 +67,8 @@ HEADER
 @header-height: 60px;
 @header-color: #000;
 header {
-	background: darken(@wet-asphalt, 10%);
+	// background: darken(@wet-asphalt, 10%);
+	background: @awww-charcoal-400;
 	padding: 10px 5px;
 	height: @header-height;
 	h1 {
@@ -101,7 +102,7 @@ MENU
 }
 
 .mobile-menu {
-	background: @wet-asphalt;
+	background: @awww-charcoal-200;
 	height: 100%;
 	right: -300px;
 	overflow-y: scroll;
@@ -111,7 +112,7 @@ MENU
 	ul {
 		list-style: none;
 		li {
-			border-bottom: 1px solid darken(@wet-asphalt, 5%);
+			border-bottom: 1px solid darken(@awww-charcoal-400, 10%);
 			height: 50px;
 			line-height: 50px;
 			padding-left: 25px;
@@ -119,10 +120,11 @@ MENU
 		}
 		li:hover,
 		li:active {
-			background: lighten(@wet-asphalt, 10%)
+			background: lighten(@awww-charcoal-200, 10%)
 		}
 		a {
-			color: @emerald-green;
+			// color: @emerald-green;
+			color: @awww-green-400;
 			text-decoration: none;
 		}
 	}
@@ -254,15 +256,15 @@ BUTTONS
 }
 
 .btn-green {
-	border: 2px solid @emerald-green;
+	border: 2px solid @awww-green-400;
 	color: white;
-	background: @emerald-green;
+	background: @awww-green-400;
 	.btn-mixin();
 }
 .btn-green:hover,
 .btn-green:active {
 	background: white;
-	color: @emerald-green;
+	color: @awww-green-400
 }
 .btn-green:focus {
 	outline: 0 !important;
@@ -295,12 +297,12 @@ TYPOGRAPHY AND COLORS
 
 //combine these two greens with 
 // the two charcoal colors
-@aww-green-400: #1AA997;
-@aww-green-200: #5DC6B8;
-@aww-charcoal-200: #2A2A2A;
-@aww-charcoal-400: #202020;
+@awww-green-400: #1AA997;
+@awww-green-200: #5DC6B8;
+@awww-charcoal-200: #2A2A2A;
+@awww-charcoal-400: #202020;
 h1 {
-	color: @emerald-green;
+	color: @awww-green-400;
 }
 
 
