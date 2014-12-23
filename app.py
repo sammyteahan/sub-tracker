@@ -30,8 +30,11 @@ class Fighter(Document):
 	structure = {
 		'name': unicode,
 		'password': unicode,
-		'win': int,
-		'loss': int,
+		'wins': int,
+		'losses': int,
+		'submissions': [
+			{'name': unicode, 'count': int}
+		]
 	}
 	required_fields = ['name', 'password']
 	use_dot_notation = True
@@ -43,6 +46,9 @@ class Fighter(Document):
 # sam.password = bcrypt.generate_password_hash('meo123')
 # sam.win = 0
 # sam.loss = 0
+# sam.submissions.append({'name': 'armbar','count': 1})
+# sam.submissions.append({'name': 'triangle','count': 1})
+# sam.submissions.append({'name': 'baseball bat choke','count': 3})
 # fighterCollection.insert(sam)
 
 # config is a dictionary used by flask-wtf 
