@@ -22,34 +22,6 @@
 	<h4 class="greeting">{{ name }}</h4>
 </div>
 
-<div class="sub-mast">
-	<div class="row">
-		<a href="{{  url_for('sweep_or_submit') }}">
-		<div class="row-icon green">
-			<i class="throw"></i>
-		</div>
-		<p class="row-title">SWEEP || SUBMIT</p>
-		</a>
-		<div class="clear"></div>
-	</div>
-	<div class="row">
-		<a href="{{  url_for('stats') }}">
-		<div class="row-icon green">
-			<i class="stats"></i>
-		</div>
-		<p class="row-title">STATS</p>
-		</a>
-		<div class="clear"></div>
-	</div>
-	<div class="row">
-		<a href="{{  url_for('roll') }}">
-		<div class="row-icon green">
-			<i class="throw"></i>
-		</div>
-		<p class="row-title">ROLL</p>
-		</a>
-		<div class="clear"></div>
-	</div>
-</div>
+{% include "partials/main-nav.html" %}
 
 {% endblock %}
