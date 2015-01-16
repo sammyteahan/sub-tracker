@@ -1,5 +1,5 @@
 /****************************************
-SETUP
+#SETUP
 ****************************************/
 * {
   -webkit-box-sizing: border-box;
@@ -20,7 +20,7 @@ body {
   background: #ecf0f1;
 }
 /****************************************
-OFF VIEWPORT NAV STRUCTURE
+#OFF VIEWPORT NAV STRUCTURE
 ****************************************/
 .wrapper {
   position: relative;
@@ -47,7 +47,7 @@ OFF VIEWPORT NAV STRUCTURE
   float: right;
 }
 /****************************************
-HEADER 
+#HEADER 
 ****************************************/
 header {
   background: #202020;
@@ -58,7 +58,7 @@ header h1 {
   text-align: left;
 }
 /****************************************
-MENU
+#MENUS
 ****************************************/
 .menu-button {
   color: white;
@@ -105,10 +105,11 @@ MENU
   text-decoration: none;
 }
 /****************************************
-MAIN
+#MAIN
 ****************************************/
 .mast {
-  background: #34495e;
+  background: #202020;
+  border-top: 2px solid #2a2a2a;
   height: 250px;
   position: relative;
 }
@@ -131,7 +132,7 @@ MAIN
   width: 100px;
 }
 .mast .greeting {
-  color: #2ecc71;
+  color: #5dc6b8;
   bottom: 20px;
   left: 50%;
   margin-left: -28px;
@@ -151,17 +152,17 @@ MAIN
 }
 .sub-mast .row-title {
   color: #34495e;
-  line-height: 75px;
-  padding-left: 85px;
+  line-height: 85px;
+  padding-left: 100px;
 }
 .sub-mast .row-icon {
   float: left;
   position: relative;
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
 }
 .sub-mast .row-icon.green {
-  background: #2ecc71;
+  background: #1aa997;
 }
 .sub-mast .row-icon.blue {
   background: #3498db;
@@ -200,10 +201,10 @@ MAIN
   background: #dde4e6;
 }
 /****************************************
-FOOTER
+#FOOTER
 ****************************************/
 /****************************************
-BUTTONS
+#BUTTONS
 ****************************************/
 .btn-md {
   font-size: 18px;
@@ -228,13 +229,13 @@ BUTTONS
   width: 100%;
 }
 /****************************************
-TYPOGRAPHY AND COLORS
+#TYPOGRAPHY AND #COLORS
 ****************************************/
 h1 {
   color: #1aa997;
 }
 /****************************************
-ERRORS
+#ERRORS
 ****************************************/
 .error-wrapper {
   margin-top: 10px;
@@ -244,7 +245,7 @@ ERRORS
   text-align: center;
 }
 /****************************************
-FORMS
+#FORMS
 ****************************************/
 .login {
   padding: 10px 5px 5px;
@@ -273,7 +274,7 @@ FORMS
   text-transform: uppercase;
 }
 /****************************************
-HELPERS
+#HELPERS
 ****************************************/
 .clear {
   clear: both;

@@ -51,7 +51,7 @@ class Fighter(Document):
 # sam.submissions.append({'name': 'baseball bat choke','count': 3})
 # fighterCollection.insert(sam)
 
-# config is a dictionary used by flask-wtf 
+# config is a dictionary used by flask
 app.config['SECRET_KEY'] = '{E]\x1eo\xa3\x04w\xe2\x1b\xf7|\x97\x93N8\x7f\xa4\xf0\xe5\n\xa7\xfc\x02' 
 
 class NameForm(Form):
@@ -105,6 +105,24 @@ def home():
 @login_required
 def record():
 	return render_template('record.html', name=session.get('username'))
+
+
+@app.route('/roll')
+@login_required
+def roll():
+	return render_template('roll.html', name=session.get('username'))
+
+
+@app.route('/stats')
+@login_required
+def stats():
+	return render_template('stats.html', name=session.get('username'))
+
+
+@app.route('/sweep-or-submit')
+@login_required
+def sweep_or_submit():
+	return render_template('sweep-or-submit.html', name=session.get('username'))
 
 
 @app.route('/logout')
