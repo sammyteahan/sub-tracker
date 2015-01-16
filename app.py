@@ -70,7 +70,7 @@ def login_required(function):
 		if 'logged_in' in session:
 			return function(*args, **kwargs)
 		else:
-			return redirect (url_for('login'))
+			return redirect(url_for('login'))
 	return wrap
 
 @app.route('/', methods=["GET", "POST"])
