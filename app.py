@@ -63,6 +63,11 @@ class LoginForm(Form):
 	username = TextField('username', validators=[Required()])
 	password = PasswordField('password', validators=[Required()])
 
+
+### Form for sweep or submit view
+# class Sweep_or_submit_form(Form):
+
+
 # login_required decorator to ensure a user is logged in
 def login_required(function):
 	@wraps(function)
@@ -80,7 +85,7 @@ def login():
 	form = LoginForm(request.form)
 	if request.method == 'POST':
 		if form.validate_on_submit():
-			user = fighterCollection.find_one({'name': request.form['username']}) #works: finds user
+			user = fighterCollection.find_one({'name': request.form['username']}) # finds user
 			print user['name']
 			print user['password']
 			if user is not None and bcrypt.check_password_hash(user['password'], request.form['password']):
